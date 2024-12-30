@@ -51,8 +51,7 @@ def verify_input(user_input):
 import openai
 import requests
 
-openai.api_key = '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'
-
+openai.api_key = 'YOUR_API_KEY_HERE'
 def query_openai(prompt):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
@@ -61,8 +60,8 @@ def query_openai(prompt):
     return response['choices'][0]['message']['content']
 
 def google_search(query):
-    api_key = 'AIzaSyBan_Hr89BY6RR5EQCfsyDiZAqarLpqtEc'
-    search_engine_id = '162674e97aa7544a3'
+    api_key = 'YOUR_API_KEY_HERE'
+    search_engine_id = 'YOUR_ENGINE_ID_HERE'
     url = f"https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}"
     
     response = requests.get(url)
